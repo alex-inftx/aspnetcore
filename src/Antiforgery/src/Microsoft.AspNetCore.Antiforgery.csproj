@@ -12,11 +12,13 @@
 
   <ItemGroup>
     <Reference Include="Microsoft.AspNetCore.DataProtection" />
+    <Reference Include="Microsoft.AspNetCore.Http" />
     <Reference Include="Microsoft.AspNetCore.Http.Abstractions" />
     <Reference Include="Microsoft.AspNetCore.Http.Features" />
     <Reference Include="Microsoft.AspNetCore.Http.Extensions" />
     <Reference Include="Microsoft.AspNetCore.WebUtilities" />
     <Reference Include="Microsoft.Extensions.ObjectPool" />
+    <Reference Include="Microsoft.Extensions.Features" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="$(SharedSourceRoot)HttpMethodExtensions.cs" LinkBase="Shared"/>
+    <Compile Include="$(SharedSourceRoot)HttpMethodExtensions.cs" LinkBase="Shared" />
   </ItemGroup>
+  
 </Project>

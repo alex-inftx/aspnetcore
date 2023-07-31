@@ -333,6 +333,11 @@ public static partial class RequestDelegateFactory
         // inference is skipped internally if necessary.
         factoryContext.ArgumentExpressions ??= CreateArgumentsAndInferMetadata(methodInfo, factoryContext);
 
+        if (factoryContext.ArgumentExpressions.Length > 0)
+        {
+            UpdateFormBindingArgumentExpressions();
+        }
+
         factoryContext.MethodCall = CreateMethodCall(methodInfo, targetExpression, factoryContext.ArgumentExpressions);
         EndpointFilterDelegate? filterPipeline = null;
         var returnType = methodInfo.ReturnType;
@@ -1990,6 +1995,8 @@ public static partial class RequestDelegateFactory
         factoryContext.FirstFormRequestBodyParameter ??= parameter;
         factoryContext.TrackedParameters.Add(key, RequestDelegateFactoryConstants.FormAttribute);
         factoryContext.ReadForm = true;
+        var formMappingOptionsMetadata = factoryContext.EndpointBuilder.Metadata.OfType<IFormMappingOptionsMetadata>().Last();
+        FormDataMapperOptions.MaxCollectionSize = formMappingOptionsMetadata.MaxFormMappingCollectionSize;
 
         // var name_local;
         // var name_reader;

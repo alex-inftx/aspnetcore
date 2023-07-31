@@ -3,6 +3,7 @@
 
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Features;
+using Microsoft.AspNetCore.Http.Metadata;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -12,7 +13,7 @@ namespace Microsoft.AspNetCore.Mvc;
 /// Sets the specified limits to the <see cref="HttpRequest.Form"/>.
 /// </summary>
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
-public class RequestFormLimitsAttribute : Attribute, IFilterFactory, IOrderedFilter
+public class RequestFormLimitsAttribute : Attribute, IFilterFactory, IOrderedFilter, IRequestFormLimitsMetadata
 {
     /// <summary>
     /// Gets the order value for determining the order of execution of filters. Filters execute in

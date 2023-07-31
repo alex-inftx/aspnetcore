@@ -13,6 +13,27 @@ Microsoft.AspNetCore.Http.Metadata.AcceptsMetadata.AcceptsMetadata(string![]! co
 Microsoft.AspNetCore.Http.Metadata.AcceptsMetadata.ContentTypes.get -> System.Collections.Generic.IReadOnlyList<string!>!
 Microsoft.AspNetCore.Http.Metadata.AcceptsMetadata.IsOptional.get -> bool
 Microsoft.AspNetCore.Http.Metadata.AcceptsMetadata.RequestType.get -> System.Type?
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata.BufferBody.get -> bool
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata.BufferBody.set -> void
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata.BufferBodyLengthLimit.get -> long
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata.BufferBodyLengthLimit.set -> void
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata.KeyLengthLimit.get -> int
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata.KeyLengthLimit.set -> void
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata.MemoryBufferThreshold.get -> int
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata.MemoryBufferThreshold.set -> void
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata.MultipartBodyLengthLimit.get -> long
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata.MultipartBodyLengthLimit.set -> void
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata.MultipartBoundaryLengthLimit.get -> int
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata.MultipartBoundaryLengthLimit.set -> void
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata.MultipartHeadersCountLimit.get -> int
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata.MultipartHeadersCountLimit.set -> void
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata.MultipartHeadersLengthLimit.get -> int
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata.MultipartHeadersLengthLimit.set -> void
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata.ValueCountLimit.get -> int
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata.ValueCountLimit.set -> void
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata.ValueLengthLimit.get -> int
+Microsoft.AspNetCore.Http.Metadata.IRequestFormLimitsMetadata.ValueLengthLimit.set -> void
 Microsoft.AspNetCore.Http.Metadata.IRouteDiagnosticsMetadata
 Microsoft.AspNetCore.Http.Metadata.IRouteDiagnosticsMetadata.Route.get -> string!
 Microsoft.AspNetCore.Http.ProblemDetailsContext.Exception.get -> System.Exception?
